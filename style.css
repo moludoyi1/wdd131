@@ -1,0 +1,20 @@
+body{
+    /* background-color:rgb(236, 62, 62); */
+    font-size:18px;
+    margin: 0;
+    
+}
+
+main{
+    background-color: rgb(185, 20, 20);
+    height: 100vh; /* vh: view port height. it's the hieght of the view port window*/
+}
+
+.green{
+    color: green;
+}
+
+footer p {
+    font-size: 0.8em; /* em unit is a relative. it says take of the current and make it 20% smaller8 */
+}
+
