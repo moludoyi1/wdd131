@@ -6,7 +6,7 @@ body{
 }
 
 main{
-    background-color: rgb(185, 20, 20);
+    /* background-color: rgb(185, 20, 20); */
     height: 100vh; /* vh: view port height. it's the hieght of the view port window*/
 }
 
