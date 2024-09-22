@@ -1,0 +1,49 @@
+/* General page style */
+body {
+    font-family: 'Times New Roman', serif; /* Basic font */
+    font-size: 20px; /* Font size */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+}
+
+/* Center the main title */
+h1, h2 {
+    text-align: center; /* Center the text */
+}
+
+/* Change the color of the subtitle */
+h2 {
+    color: #006EB6; /* BYU blue */
+}
+
+/* Box that holds all the content */
+.content {
+    max-width: 600px; /* Limit the width */
+    margin: 20px auto; /* Center the content */
+    padding: 20px; /* Add space inside the box */
+    border: 1px solid #ccc; /* Light gray border */
+    background-color: #f9f9f9; /* Light background */
+}
+
+/* Style for the logo */
+.logo {
+    display: block; /* Make it block so it centers easier */
+    margin: 20px auto; /* Center the logo */
+    width: 150px; /* Set size for the logo */
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text for contrast */
+}
+
+/* Dark mode subtitle color change */
+body.dark h2 {
+    color: #7fbffb; /* Lighter blue for better contrast */
+}
+
+/* Dark mode logo adjustments */
+body.dark .logo {
+    content: url('logo-white.webp'); /* Change the logo to white version */
+}
