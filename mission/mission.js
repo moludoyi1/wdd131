@@ -5,7 +5,7 @@ const themeSelector = document.querySelector('#theme');
 const bodyElement = document.body;
 
 // Select the logo
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('.footer-img');
 
 // Function to change the theme
 function changeTheme() {
@@ -14,12 +14,12 @@ function changeTheme() {
         // Add the "dark" class to the body
         bodyElement.classList.add('dark');
         // Change the logo to the white version
-        logo.src = 'logo-white.webp';
+        logo.src = 'byui-logo_dark.png';
     } else {
         // If not dark, remove the "dark" class
         bodyElement.classList.remove('dark');
         // Change the logo back to the blue version
-        logo.src = 'logo-blue.webp';
+        logo.src = 'byulogo_img.webp';
     }
 }
 

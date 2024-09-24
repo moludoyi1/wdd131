@@ -4,20 +4,39 @@ body {
     font-size: 20px; /* Font size */
     background-color: #ffffff; /* White background */
     color: #000000; /* Black text */
+    
 }
 
 /* Center the main title */
 h1, h2 {
     text-align: center; /* Center the text */
+    text-transform: uppercase;
+}
+h1{
+    letter-spacing: 2px;  /* Adds some space between letters */
 }
 
 /* Change the color of the subtitle */
 h2 {
+    font-size: 1em;
     color: #006EB6; /* BYU blue */
+    letter-spacing: 1.3px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;  /* Remove the default margin */
+
 }
 
+hr {
+    border: none;
+    height: 0.5px; /* Thickness of the line */
+    background: linear-gradient(to right, transparent, #000, transparent);
+    margin: 10px 0; /* Adds space around the line */
+    margin-top: 0;
+  }
+  
+
 /* Box that holds all the content */
-.content {
+.container {
     max-width: 600px; /* Limit the width */
     margin: 20px auto; /* Center the content */
     padding: 20px; /* Add space inside the box */
@@ -26,15 +45,19 @@ h2 {
 }
 
 /* Style for the logo */
-.logo {
+.footer-img {
     display: block; /* Make it block so it centers easier */
     margin: 20px auto; /* Center the logo */
     width: 150px; /* Set size for the logo */
 }
 
+li{
+    margin-bottom: 1rem; /* adds space to the bottom of the list */
+}
+
 /* Dark mode styles */
 body.dark {
-    background-color: #333; /* Dark gray background */
+    background-color: #030303; /* Dark gray background */
     color: #fff; /* White text for contrast */
 }
 
@@ -43,7 +66,15 @@ body.dark h2 {
     color: #7fbffb; /* Lighter blue for better contrast */
 }
 
+body.dark .container{
+    background-color: #1a1a1a; /* Dark gray background */
+}
+
+body.dark hr{
+    background: linear-gradient(to right, transparent, #d3d9df, transparent);
+}
+
 /* Dark mode logo adjustments */
-body.dark .logo {
-    content: url('logo-white.webp'); /* Change the logo to white version */
+body.dark .footer-img {
+    content: url('byui-logo_dark.png'); /* Change the logo to white version */
 }
