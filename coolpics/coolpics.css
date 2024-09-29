@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c; /* Dark Purple */
+    --secondary-color: #59c3c3; /* Teal */
+    --accent-color: #f45b69; /* Pinkish */
+    --text-dark: #333; /* Dark Gray */
+    --text-light: #ebebeb; /* Light Gray */
+    --primary-font: Arial, Helvetica, sans-serif; /* Body font */
+    --secondary-font: 'Mooli', sans-serif; /* Headline font */
+}
+
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em; /* Increase base font size */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+header {
+    background: var(--primary-color); /* Dark Purple */
+    color: var(--text-light); /* Light Gray for text */
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--secondary-font); /* Mooli for headlines */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--accent-color); /* Pinkish for links */
+    text-decoration: none;
+}
+
+nav button {
+    background: none; /* Remove button styles */
+    border: none;
+    color: var(--accent-color); /* Color for the menu button */
+    font-size: 1.2em; /* Increase size */
+    cursor: pointer; /* Cursor as pointer */
+}
+
+.hide {
+    display: none; /* Class to hide elements */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center; /* Center content */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery figure {
+    margin: 10px;
+}
+
+img {
+    width: 250px; /* Set width to 250px */
+    height: 250px; /* Set height to 250px */
+    max-width: 100%; /* Responsive */
+    object-fit: cover; /* Crop the image */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: var(--primary-color); /* Dark Purple */
+    color: var(--text-light); /* Light Gray */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query for screens wider than 700px */
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+}
+
+/* Media Query for screens wider than 1000px */
+@media screen and (min-width: 1000px) {
+    nav button {
+        display: none; /* Hide the menu button */
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+}
