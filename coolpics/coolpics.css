@@ -110,3 +110,48 @@ footer {
         grid-template-columns: repeat(3, 1fr); /* Three columns */
     }
 }
+
+/* Modal Styles */
+.viewer {
+    display: grid;
+    position: fixed; /* Position fixed for modal */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+    color: white; /* Change text color to white for visibility */
+    z-index: 10; /* Ensure the modal is above other content */
+    place-items: center; /* Center content in the grid */
+    text-align: center; /* Center text */
+}
+
+.viewer img {
+    max-width: 90%; /* Limit image width to 90% of the viewport */
+    max-height: 90%; /* Limit image height to 90% of the viewport */
+}
+
+.close-viewer {
+    justify-self: end; /* Position the close button */
+    background: transparent; /* No background for button */
+    border: none; /* No border for button */
+    font-size: 1.5em; /* Font size for the close button */
+    color: white; /* Change color for visibility */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Styles for larger screens (if needed) */
+@media screen and (min-width: 1000px) {
+    .viewer {
+        padding: 20px; /* Add padding for larger screens */
+    }
+
+    .viewer img {
+        max-height: 80%; /* More breathing space */
+    }
+}
+
+/* Hide modal by default */
+.hide {
+    display: none; /* Hide modal */
+}
