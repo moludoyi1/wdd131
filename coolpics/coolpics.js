@@ -1,13 +1,11 @@
 const menuButton = document.querySelector(".menu-button"); // select the menu button
 const menu = document.querySelector(".menu");
+// const gallery = document.querySelector(".gallery");
 
 // function to toggle the visibilty of the menu
 function toggleMenu() {
     menu.classList.toggle("hide"); // Toggle the 'hide' class
 }
-
-// Add an event listener to the menu button
-menuButton.addEventListener("click", toggleMenu);
 
 // Function to handle window resize events
 function handleResize() {
@@ -31,11 +29,8 @@ function viewerTemplate(pic, alt) {
     </div>`;
 }
 
-
-
 const modalImage = document.querySelector("#modal-image"); // select the modal image
 const closeViewerButton = document.querySelector(".close-viewer"); //  select the close viewer button
-
 
 // Show the image in the modal
 function showImage(src) {
@@ -60,14 +55,17 @@ thumbnails.forEach((thumbnail) => {
 // Add event listener to close button
 closeViewerButton.addEventListener("click", closeModal);
 
-// Add resize event listener to the window
-window.addEventListener("resize", handleResize);
-
-
-
 function viewerTemplate(pic, alt) {
     return `<div class="viewer">
         <button class="close-viewer">X</button>
         <img src="${pic}" alt="${alt}">
     </div>`;
 }
+// function close
+
+// Add an event listener to the menu button
+menuButton.addEventListener("click", toggleMenu);
+// Add resize event listener to the window
+window.addEventListener("resize", handleResize);
+
+// gallery.addEventListener("resize", handleResize);
