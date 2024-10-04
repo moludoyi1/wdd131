@@ -1,11 +1,10 @@
 import{articles} from  './blog.js'; // import articles from blog.js
 
-document.addEventListener("DOMContentLoaded", () => {
-    const articlesContainer = document.querySelector("#articles-container");
-
-    // Function to build articles from the array
+// Function to build articles from the array
     function displayArticles() {
-        articles.forEach(article => {
+        const articlesContainer = document.querySelector('.book-review');
+
+        articles.forEach((article) => {
             // Create a new article element
             const articleElement = document.createElement("article");
 
@@ -14,17 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2>${article.title}</h2>
                 <p class="date">${article.date}</p>
                 <ul class="details-container">
-                    <li>Author: ${article.author}</li>
+                    <li>Age: ${article.ages}</li>
+                    <li>Genre: ${article.genre}</li>
                 </ul>
-                <img src="${article.image}" alt="${article.title}">
+                <img src="${article.imgSrc}" alt="${article.imgAlt}">
                 <p>${article.description}</p>
             `;
 
-            // Append the new article to the container
-            articlesContainer.appendChild(articleElement);
+        // Append the new article to the container
+        articlesContainer.appendChild(articleElement);
         });
     }
 
-    // Call the function to display articles
-    displayArticles();
-});
+document.addEventListener("DOMContentLoaded", displayArticles);
