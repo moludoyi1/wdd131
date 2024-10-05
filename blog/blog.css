@@ -1,181 +1,193 @@
 /* Import Google Font for Lora */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 
 /* General Styles */
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #473144;
-    background-color: #FDF6F0;
-    margin: 0;
-    padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #473144;
+  background-color: #fdf6f0;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
-    font-family: 'Lora', serif;
-    color: #AF1B3F;
+h1,
+h2 {
+  font-family: "Lora", serif;
+  color: #af1b3f;
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 1rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 h2 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 header {
-    background-color: #EFC69B;
-    padding: 1rem;
+  background-color: #f4f6f0;
+  padding: 1rem;
 }
 
 /* Header Title */
-header h1{
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 20px 0;
-    color: #473144;
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px 0;
+  color: #473144;
 }
 
 /* Navigation List */
 nav ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Display inline items */
-    justify-content: flex-end;
-    max-width: 800px; /* Max width for center alignment */
-    margin: 0 auto; /* Center nav block */
-    border-top: 2px solid #473144;  /* Dark borders */
-    border-bottom: 2px solid #473144;
-    padding: 10px 0; /* Space inside the nav */
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display inline items */
+  justify-content: flex-end;
+  width: 100%;
+  max-width: none; /* Max width for center alignment */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  margin: 0 auto; /* Center nav block */
+  border-top: 1.5px solid #efc69b; /* Dark borders */
+  border-bottom: 1.5px solid #efc69b;
+  padding: 10px 150px; /* Space inside the nav */
 }
 
 nav ul li {
-    /* display: inline;
+  /* display: inline;
     margin: 0 1rem; */
-    padding: 10px 0; /* Adjust the line height or padding for nav */
+  padding: 10px 0; /* Adjust the line height or padding for nav */
 }
 
 /* Navigation Links */
 nav ul li a {
-    font-size: 1.2rem; /* Increase font size */
-    color: #AF1B3F; /* Red color */
-    text-decoration: none; /* No underline */
-    padding: 10px 20px; /* Space around links */
+  font-size: 1.2rem; /* Increase font size */
+  color: #af1b3f; /* Red color */
+  text-decoration: none; /* No underline */
+  padding: 10px 20px; /* Space around links */
+
 }
 
 nav ul li a:hover {
-    /* color: #AF1B3F; */
-    text-decoration: underline;
+  /* color: #AF1B3F; */
+  text-decoration: underline;
 }
 
 .skiptocontent a {
-    position: absolute; /* Set the element to absolute positioning */
-    top: -40px; /* Move it off-screen */
-    left: 0; /* Align it to the left edge of the screen */
-    background-color: #EFC69B; /* Change background to stand out */
-    color: #473144; /* Set text color */
-    padding: 8px 12px; /* Add some padding */
-    z-index: 1000; /* Ensure it appears on top of other elements */
-    transition: top 0.2s; /* Smooth transition */
+  position: absolute; /* Set the element to absolute positioning */
+  top: -40px; /* Move it off-screen */
+  left: 0; /* Align it to the left edge of the screen */
+  background-color: #efc69b; /* Change background to stand out */
+  color: #473144; /* Set text color */
+  padding: 8px 12px; /* Add some padding */
+  z-index: 1000; /* Ensure it appears on top of other elements */
+  transition: top 0.2s; /* Smooth transition */
 }
 
 .skiptocontent a:focus {
-    top: 0; /* Move it back on-screen when focused */
+  top: 0; /* Move it back on-screen when focused */
 }
 
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* 2/3 space for the articles, 1/3 for the filter */
-    gap: 2rem; /* Space between the two columns */
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 space for the articles, 1/3 for the filter */
+  gap: 2rem; /* Space between the two columns */
+  padding: 2rem;
 }
 
-article{
-    margin-bottom: 20px; /* Add some space between articles */
-    max-width: 800px; /* Same width restriction as the navbar */
-    margin-left: auto;  /* Center align the article */
-    margin-right: auto;  /* Center align the article */
-    border: 1px solid #EFC69B; /* Example border color */
-    padding: 15px;
-    margin: 20px 0; /* Space between articles */
+article {
+  margin-bottom: 20px; /* Add some space between articles */
+  max-width: 800px; /* Same width restriction as the navbar */
+  margin-left: auto; /* Center align the article */
+  margin-right: auto; /* Center align the article */
+  /* border: 1px solid #efc69b; Example border color */
+  padding: 15px;
+  margin: 20px 0; /* Space between articles */
 }
 
-article p{
-    font-size: 1.2em; /* Increase font size */
+article p {
+  font-size: 1.2em; /* Increase font size */
 }
 
 article ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    text-align: right; /* Right align the text */
-    list-style: none; /*Remove bullet points*/
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  text-align: right; /* Right align the text */
+  list-style: none; /*Remove bullet points*/
 }
 
 article ul li {
-    margin: 0; /* Remove any default margin */
-    line-height: 1.2; /* Adjust line-height */
+  margin: 0; /* Remove any default margin */
+  line-height: 1.2; /* Adjust line-height */
+}
+
+article .date {
+    font-size: 1.3em; /*make the font size a bit bigger */
+    font-weight: bold; /* make the font bold */
 }
 
 .details-container {
-    border-right: 2px solid #AF1B3F; /*Right border color */
-    padding: 0 10px; /*Adjust left and right spacing*/
-    margin-bottom: 10px; /* Space below details */
+  border-right: px solid #efc69b; /*Right border color */
+  padding: 0 10px; /*Adjust left and right spacing*/
+  margin-bottom: 10px; /* Space below details */
 }
 
 .date {
-    font-size: 0.9em; /* Smaller font size for the date */
-    color: #473144; /* Dark color */
+  font-size: 0.9em; /* Smaller font size for the date */
+  color: #473144; /* Dark color */
 }
 
 article h2 {
-    margin-top: 0; /* Align title with the date */
-    margin-bottom: 15px; /* Adjust as necessary */
+  margin-top: 0; /* Align title with the date */
+  margin-bottom: 15px; /* Adjust as necessary */
 }
 
 article img {
-    display: block; /* Center image */
-    margin: 0 auto; /* Center image */
-    max-width: 100%; /* Ensure it doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
+  display: block; /* Center image */
+  margin: 0 auto; /* Center image */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .book-review article {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Left side for book-meta, right side for content */
-    gap: 1rem; /* Space between the meta info and the content */
-    /* background-color: #FFFFFF; */
-    border: 1px solid #EFC69B;
-    padding: 1rem;
-    /* width: 60%; */
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Left side for book-meta, right side for content */
+  gap: 1rem; /* Space between the meta info and the content */
+  /* background-color: #FFFFFF; */
+  padding: 1rem;
+  /* width: 60%; */
+}
+
+aside#filter-form {
+  border: 1px solid #efc69b;
 }
 
 .book-meta {
-    /* margin-bottom: 1rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  /* margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .book-meta p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
-.book-content{
-    display: flex;
-    flex-direction: column;
+.book-content {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-    background-color: #473144;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  background-color: #473144;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
