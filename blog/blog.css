@@ -50,7 +50,7 @@ nav ul {
   max-width: none; /* Max width for center alignment */
   box-sizing: border-box; /* Include padding and border in width calculation */
   margin: 0 auto; /* Center nav block */
-  border-top: 1.5px solid #efc69b; /* Dark borders */
+  border-top: 1.5px solid #efc69b;
   border-bottom: 1.5px solid #efc69b;
   padding: 10px 150px; /* Space inside the nav */
 }
@@ -67,7 +67,6 @@ nav ul li a {
   color: #af1b3f; /* Red color */
   text-decoration: none; /* No underline */
   padding: 10px 20px; /* Space around links */
-
 }
 
 nav ul li a:hover {
@@ -102,7 +101,7 @@ article {
   max-width: 800px; /* Same width restriction as the navbar */
   margin-left: auto; /* Center align the article */
   margin-right: auto; /* Center align the article */
-  /* border: 1px solid #efc69b; Example border color */
+  border: 1px solid #efc69b; /*Example border color*/
   padding: 15px;
   margin: 20px 0; /* Space between articles */
 }
@@ -124,12 +123,12 @@ article ul li {
 }
 
 article .date {
-    font-size: 1.3em; /*make the font size a bit bigger */
-    font-weight: bold; /* make the font bold */
+  font-size: 1.3em; /*make the font size a bit bigger */
+  font-weight: bold; /* make the font bold */
 }
 
 .details-container {
-  border-right: px solid #efc69b; /*Right border color */
+  border-right: 1.5px solid #efc69b; /*Right border color */
   padding: 0 10px; /*Adjust left and right spacing*/
   margin-bottom: 10px; /* Space below details */
 }

@@ -12,8 +12,8 @@ function displayArticles() {
     articleElement.innerHTML = `
       <ul class="details-container">
       <p class="date">${article.date}</p>
-        <li>Age: ${article.ages}</li>
-        <li>Genre: ${article.genre}</li>
+        <li>${article.ages}</li>
+        <li>${article.genre}</li>
       </ul>
       <div>
         <h2>${article.title}</h2>
