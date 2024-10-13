@@ -1,31 +1,90 @@
+/* General styles for the whole page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
+  font-family: Arial, sans-serif; /* Sets the font */
+  background-color: #f5f5f5; /* Light background color */
+  display: flex; /* Align the page in the center */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  margin: 0; /* Removes default margin */
 }
 
-.creditCardForm {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+/* Main section */
+main {
+  width: 100%;
+  max-width: 1000px; /* Limits width to 400px */
+  padding: 20px; /* Adds padding around the main section */
 }
 
-.cardFront, .cardBack {
-    border: 1px solid #ccc;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    width: 48%;
+/* Form container styles */
+.formContainer {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Grid layout with 3 rows */
+  gap: 20px; /* Adds space between rows */
+  justify-items: center;
+  align-items: center;
 }
 
-h2 {
-    font-size: 1.2em;
+/* Styles for the front side of the card */
+.cardFront {
+  display: grid;
+  grid-template-columns: 1fr; /* Single-column grid */
+  gap: 10px; /* Space between form inputs */
+  padding: 20px; /* Padding inside the card */
+  background-color: #473144; /* Dark purple background */
+  color: white; /* White text color */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Input labels and text fields */
+.cardFront label,
+.cardBack label {
+  font-size: 14px; /* Smaller font for labels */
+}
+
+.cardFront input,
+.cardBack input {
+  padding: 10px; /* Adds space inside the inputs */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 5px; /* Slightly rounded corners */
+  width: 100%;
+}
+
+/* Back of the card */
+.cardBack {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 20px;
+  background-color: #473144;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  position: relative;
+}
+
+/* Grey bar on the back of the card */
+.greyBar {
+  background-color: #2b2b2b; /* Dark grey color */
+  height: 40px; /* Set the height of the bar */
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Submit button styles */
+button {
+  padding: 12px 20px;
+  background-color: #af1b3f; /* Red button color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Shows a hand cursor on hover */
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #9b1636; /* Darker red on hover */
 }
