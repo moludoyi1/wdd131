@@ -15,8 +15,8 @@
       <form action="#" method="POST" class="creditCardForm">
         <!-- This is the front side of the card -->
         <div class="cardFront">
+          <label>Total: $199</label>
           <img class="card-image" src="img.svg" height="55px" />
-
           <!-- the contents of the card front goes here -->
           <label for="fullName">Full Name:</label>
           <input type="text" id="fullName" name="fullName" required />
@@ -24,7 +24,7 @@
           <label for="cardNumber">Card Number:</label>
           <input type="text" id="cardNumber" name="cardNumber" required />
 
-          <label for="expirationMonth">Expiration Month:</label>
+          <label for="expirationMonth">Expiration:</label>
           <select id="expirationMonth" name="expirationMonth" required>
             <option value="">Select Month</option>
             <option value="01">January</option>
@@ -41,7 +41,7 @@
             <option value="12">December</option>
           </select>
 
-          <label for="expirationYear">Expiration Year:</label>
+          <!-- <label for="expirationYear">Expiration Year:</label> -->
           <select id="expirationYear" name="expirationYear" required>
             <option value="">Select Year</option>
             <script>

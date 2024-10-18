@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 /* General styles for the whole page */
 body {
   font-family: Arial, sans-serif; /* Sets the font */
@@ -17,25 +21,34 @@ main {
 }
 
 /* Form container styles */
-.formContainer {
+form.creditCardForm {
   display: grid;
-  grid-template-rows: auto auto auto; /* Grid layout with 3 rows */
-  gap: 20px; /* Adds space between rows */
+  max-height: 600px;
+  max-width: 500px;
+  grid-template-columns: 0.5fr 5fr 0.5fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+  gap: 20px;
   justify-items: center;
   align-items: center;
 }
 
 /* Styles for the front side of the card */
 .cardFront {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
   display: grid;
-  grid-template-columns: 1fr; /* Single-column grid */
-  gap: 10px; /* Space between form inputs */
-  padding: 20px; /* Padding inside the card */
-  background-color: #473144; /* Dark purple background */
-  color: white; /* White text color */
-  border-radius: 8px; /* Rounded corners */
+  gap: 10px;
+  padding: 20px;
+  background-color: #808088;
+  color: white;
+  border-radius: 8px;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* Input labels and text fields */
@@ -57,12 +70,16 @@ main {
   display: grid;
   grid-template-rows: auto auto;
   gap: 10px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
   padding: 20px;
-  background-color: #473144;
+  background-color: #808088;
   color: white;
   border-radius: 8px;
   width: 100%;
-  position: relative;
+  height: 100%;
 }
 
 /* Grey bar on the back of the card */
@@ -76,13 +93,15 @@ main {
 /* Submit button styles */
 button {
   padding: 12px 20px;
-  background-color: #af1b3f; /* Red button color */
+  background-color: #af1b3f;
   color: white;
   border: none;
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Shows a hand cursor on hover */
+  border-radius: 8px;
+  cursor: pointer;
   width: 100%;
   font-size: 16px;
+  grid-column-start: 3;
+  grid-row-start: 4;
 }
 
 button:hover {
