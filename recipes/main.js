@@ -16,17 +16,24 @@ function getRandomRecipe(recipes) {
 function generateRecipeHTML(recipe) {
     return `
         <section class="recipe">
-            <h2>${recipe.name}</h2>
-            <div class="recipe-details">
-                <img src="${recipe.image}" alt="${recipe.name}">
-                <p><strong>Ingredients:</strong></p>
-                <ul>
-                    ${recipe.recipeIngredient.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                </ul>
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="recipes-informations">
+            <div class="tag-names">
+                ${recipe.tags.map(tag  => `<span class="tag">${tag}</span>`).join('')}
             </div>
-            <div class="tags">${generateTagsHTML(recipe.tags)}</div>
+            <h2>${recipe.name}</h2>
             <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
                 ${generateRatingHTML(recipe.rating)}
+            </div>
+                <div class="recipe-details">
+                    <p class="description">${recipe.description}</p>
+                    <div class="ingredients">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            ${recipe.recipeIngredient.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     `;
@@ -81,6 +88,7 @@ function filterRecipes(query) {
 // Event handler for the search button
 function searchHandler(e) {
     e.preventDefault(); // Prevent page reload
+    console.log("hello")
 
     // Get the search input value
     const searchInput = document.getElementById('search-input');
@@ -103,7 +111,7 @@ function init() {
 }
 
 // Attach event listener to the search button
-document.getElementById('search-button').addEventListener('click', searchHandler);
+document.querySelector('.search-form').addEventListener('submit', searchHandler);
 
 // Call the init function to kick things off
 init();
