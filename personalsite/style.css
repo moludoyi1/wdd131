@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Luckiest+Guy&family=Roboto+Slab:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --primary-color: #c4d8e8;
+  --secondary-color: #7aa7cd;
+  --fontstyle1: "Allura", cursive;
+  --fontstyle2: "Luckiest Guy", cursive;
+  --fontstyle3: "Roboto Slab", serif;
+}
+
+/* body styles go here */
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #d7caac;
+}
+
+.hero_container img {
+  width: 80%;
+  margin: 2em auto;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: block;
+}
+
+.hero_container {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.hero_container h2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: white;
+  font-weight: 600;
+}
+
+/* container */
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+/* Header Section */
+header {
+  padding: 20px 0;
+}
+
+header .business_name h1 {
+  font-weight: 600;
+  /* font-family: var(--fontstyle2); */
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+header img {
+  max-width: 200px;
+  margin-top: 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+header nav ul li a.book-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("your-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content h2 {
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Content Sections */
+.content-section {
+  /* padding: 60px 0; */
+  margin-bottom: 15em;
+  /* text-align: center; */
+}
+
+.content-section h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  /* position: fixed; */
+  /* bottom: 20px; */
+  /* right: 20px; */
+  padding: 10px 15px;
+  background-color: #b07e19;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  /* z-index: 1000; */
+  font-size: 14px;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 0.5;
+}
+
+/* Footer */
+footer {
+  /* background-color: #ede4da; */
+  color: #000000;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+/* inspired by codepen curved card carousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.we-carousel {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services_container {
+  display: block;
+  width: 200px;
+  height: 100%;
+  position: relative;
+}
+
+.we-card {
+  width: 70%;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  /* text-align: center; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.we-card img {
+  display: block;
+  width: 100%;
+}
+
+.we-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.we-card p {
+  color: #555;
+}
+
+.we-card.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(0);
+  /* height: 100%; */
+  width: 100%;
+}
+
+.we-card.prev-1,
+.we-card.next-1 {
+  opacity: 1;
+  /* filter: blur(4px); */
+  z-index: 1;
+}
+
+.we-card.prev-2,
+.we-card.next-2 {
+  opacity: 0;
+  z-index: 1;
+}
+
+.we-card.prev-3,
+.we-card.next-3 {
+  opacity: 0;
+}
+
+.we-card.prev-1 {
+  transform: translateX(-230px) translateY(20px);
+}
+
+.we-card.next-1 {
+  transform: translateX(230px) translateY(20px);
+}
+
+.we-card.prev-2 {
+  transform: translateX(-483px) translateY(80px);
+}
+
+.we-card.next-2 {
+  transform: translateX(483px) translateY(80px);
+}
+
+.we-card.prev-3 {
+  transform: translateX(-697px) translateY(172px);
+}
+
+.we-card.next-3 {
+  transform: translateX(697px) translateY(172px);
+}
+
+.we-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  color: #000;
+  padding: 20px;
+  z-index: 20;
+  margin-top: 3em;
+}
+
+.we-arrow:hover {
+  color: #555;
+}
+
+/* booking form styles */
+
+.booking-form-section {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: var(--fontstyle3);
+}
+
+.booking-form-section h3 {
+  text-align: center;
+  font-family: var(--fontstyle1);
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.booking-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.booking-form-section label {
+  font-size: 1em;
+  color: #333;
+}
+
+.booking-form-section input,
+.booking-form-section select,
+.booking-form-section button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.booking-form-section button.submit-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.booking-form-section button.submit-btn:hover {
+  background-color: #6190c4;
+}
